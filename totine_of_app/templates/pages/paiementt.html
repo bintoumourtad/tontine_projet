@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{%block contenu %}
+<div id="demo">
+    <h1>liste des paiements</h1>
+</div>
+
+
+<div class="row mt-3">
+    <div class="col-md-25 m-auto ">
+      <div class="card card-boody border-primary border border bg-dark p-1">
+        {% if paiementt %}
+        <ul class="list-group list-group-flush">
+          {% for paiements in paiementt %}
+          <li class="list-group-item">
+            <div class="table-responsive-vertical shadow-z-1">
+                <table id="" class="table table-hover table-mc-light-blue ">
+                    <thead>
+                      <tr>
+                        <th>nom</th>
+                        <th>prenom</th>
+                        <th>montant_paiement</tdh>
+                        <th>date_paiement</th><br>
+                        <a href=""><button id="attente">attente</button></a>
+                         <a href=""><button id="effectue">effectue</button></a>
+                      </th>
+                        </tr>
+                      <tr>
+                        <td>{{paiements.nom}}</td>
+                        <td> {{paiements.prenom}}</td>
+                        <td>{{paiements.montant_paiement}}</td>
+                        <td> {{paiements.date_paeiement}}</td>
+                        
+                        </tr>
+                    </thead>
+                    </tbody>
+                </table>
+          </a
+          >
+         </li> 
+         {% endfor %}
+        </ul>
+        {% else %}
+        {% endif %} 
+      </div>
+       </div>
+      </div>
+
+      <style media="screen">
+
+        footer {
+      text-align: center;
+      padding:8px;
+      background-color:  #1d72af;;
+      color: #faf8f8;
+      width: 100%;
+      margin-top:35%;
+      }
+        
+      </style>
+
+<footer>
+  <small>Copyright © 2024 projet Tontine.</small>
+</footer>
+{% endblock %}

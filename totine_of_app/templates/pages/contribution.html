@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style media="screen">
+
+.container {
+margin: 80px 140px 60px 140px;
+padding: 0px 90px 90px 90px;
+padding-right: calc(var(--bs-gutter-x) * .5);
+padding-left: calc(var(--bs-gutter-x) * .5);
+margin-right: auto;
+margin-left: auto;
+background-image:url(image.png)
+}
+
+#customers {
+font-family: Arial, Helvetica, sans-serif;
+border-collapse: collapse;
+width: 100%;
+}
+
+#customers td,
+#customers th {
+border: 1px solid rgb(17, 4, 4);
+padding: 6px;
+}
+
+#customers tr:nth-child(even) {
+background-color: #f2f2f2;
+
+}
+
+#customers tr:hover {
+background-color: #ddd;
+
+}
+
+#customers th {
+padding-top: 12px;
+padding-bottom: 12px;
+text-align: left;
+background-color: rgb(44, 44, 130);
+color: white;
+}
+
+#customers #mid {
+text-align: center;
+}
+
+#customers #up {
+background-color: rgb(255, 225, 0);
+border-color: white;
+border-radius: 5px;
+padding: 8px;
+color: white;
+}
+
+#customers #del {
+background-color: red;
+border-color: white;
+border-radius: 5px;
+padding: 8px;
+color: white;
+}
+
+#customers button {
+width: 100%;
+}
+
+.container1 #new {
+background-color: blue;
+border-color: red;
+border-radius: 5px;
+padding: 8px;
+color: white;
+}
+
+.container2 #new1 {
+background-color: rgb(4, 51, 29);
+border-color: red;
+border-radius: 5px;
+padding: 8px;
+color: white;
+}
+
+h1 {
+color: rgb(66, 110, 159);
+}
+
+.container1 input {
+padding: 8px;
+}
+
+.container2 input {
+padding: 8px;
+}
+
+.container1 {
+margin: 80px 240px 60px 240px;
+padding: 0px 100px 100px 100px;
+}
+
+.container2 {
+margin: 80px 240px 60px 240px;
+padding: 0px 100px 100px 100px;
+}
+
+.container #new3 {
+padding: 8px;
+background-color: rgb(14, 12, 85);
+color: rgb(255, 255, 255);
+border-radius: 4px;
+border-color: #4904aa;
+}
+
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>les contributions</h1>
+        <table id="customers" border="1">
+            <thead>
+                <th>Id</th>
+                <th>nom</th>
+                <th>prenom</th>
+                <th>montant</th>
+
+                <th>date</th>
+                
+                <th colspan="2"id="mid">Action</th>
+            </thead>
+            {% for contribution in contributions %}
+            <tr>
+                <td>{{contribution.id}}</td>
+                <td>{{contribution.nom}}</td>
+                <td>{{contribution.prenom}}</td>
+                <td>{{contribution.montant}}</td>
+                <td>{{contribution.date}}</td>
+                <td>
+                <a href=" {% url 'updatee' contribution.id %}"><button id="up">update</button></a>
+                </td>
+                <td>
+                    <a href="{% url 'deletee' contribution.id %}"><button id="del">delete</button></a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br><br>
+        <a href="{% url 'addd' %}"><button id="new3">Ajouter la contribution des membre</button></a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,271 @@
+{% extends 'base.html' %}
+{%block contenu %}
+{% load static%}
+<marquee>
+  <h2 style="color: #f8e4fd;">BIENVENUE DANS NOTRE APPLICATION DE TONTINE</h2>
+  </marquee>
+<section id="hero" class="hero d-flex align-items-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 d-flex flex-column justify-content-center ">
+        <h1  style="color: #f8e4fd;"data-aos="fade-up">dal len ak diamou fi si sougnou groupetontinee</h1>
+        <h2  style="color: #f8e4fd;"data-aos="fade-up" data-aos-delay="400">groupe bi dafa nieuw pour diapalé sono jiguenn gni si coté bo nék mo kham si khaliss wala tissus wala thioray wala pour magal</h2>
+        <div data-aos="fade-up" data-aos-delay="600">
+        </div>
+      </div>
+      <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+        <img src="{%static 'image.png'%}" class="img">
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ======= Services Section ======= -->
+<section id="services" class="services">
+
+  <div class="container" data-aos="fade-up">
+
+    <header class="section-header">
+      <center><h2 style="color: #f8e4fd;">groupetontine</h2></center>
+      <p style="color: #f8e4fd;">les differents facon de tontine qui sont existent dan notre application de tontine</p>
+    </header>
+
+    <div class="row gy-4">
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-box blue">
+          <img src="{%static 'chassure.jpeg'%}" class="img">
+          <h3>TONTINE DE CHASSURE</h3>
+          </p>
+          <a href="groupe/6/" class="read-more"><span>Rejondre</span> <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-box orange">
+          <img src="{%static 'tissu.jpg'%}" class="img">
+          <h3>TONTINE TISSU</h3>
+          <a href="groupe/2/" class="read-more"><span>Rejondre</span> <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-box green">
+          <img src="{%static 'parfum.jpeg'%}" class="img">
+          <h3>TONTINE</h3>
+          <a href="groupe/30/" class="read-more"><span>Rejondre</span> <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="service-box red">
+          <img src="{%static 'thioraye.jpeg'%}" class="img">
+          <h3>TONTINE THIORAYE</h3>
+          <a href="groupe/1/" class="read-more"><span>Rejondre</span> <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+        <div class="service-box purple">
+          <a href=""></a>
+          <img src="{%static 'abaya1.jpeg'%}" class="img">
+          <h3>TONTINE ABAYA</h3>
+          <p>
+            <br>APPLICATION TONTINE</p>
+          <a href="groupe/29/" class="read-more"><span>Rejondre</span> <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
+        <div class="service-box pink">
+        <img src="{%static 'khaliss.jpeg'%}" class="img">
+          <h3>TONTINE KHALISS</h3>
+          <a href="groupe/3/" class="read-more"><span>Rejondre</span> <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<style media="screen">
+    body{
+        background-color: #1d72af;
+    }
+   .img{
+    position: relative;
+    border-radius: 300px;
+    width:80%;
+
+    }
+    footer {
+  text-align: center;
+  padding:8px;
+  background-color:  #1d72af;;
+  color: #faf8f8;
+  width: 105%;
+  margin-top:49%;
+}
+
+   
+   
+.services .service-box {
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+  height: 100%;
+  padding: 60px 30px;
+  text-align: center;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.services .service-box .icon {
+  font-size: 36px;
+  padding: 40px 20px;
+  border-radius: 4px;
+  position: relative;
+  margin-bottom: 25px;
+  display: inline-block;
+  line-height: 0;
+  transition: 0.3s;
+}
+
+.services .service-box h3 {
+  color: #444444;
+  font-weight: 700;
+}
+
+.services .service-box .read-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 8px 20px;
+}
+
+.services .service-box .read-more i {
+  line-height: 0;
+  margin-left: 5px;
+  font-size: 18px;
+}
+
+.services .service-box.blue {
+  border-bottom: 3px solid #2db6fa;
+}
+
+.services .service-box.blue .icon {
+  color: #2db6fa;
+  background: #dbf3fe;
+}
+
+.services .service-box.blue .read-more {
+  color: #2db6fa;
+}
+
+.services .service-box.blue:hover {
+  background: #2db6fa;
+}
+
+.services .service-box.orange {
+  border-bottom: 3px solid #f68c09;
+}
+
+.services .service-box.orange .icon {
+  color: #f68c09;
+  background: #fde3c4;
+}
+
+.services .service-box.orange .read-more {
+  color: #f68c09;
+}
+
+.services .service-box.orange:hover {
+  background: #f68c09;
+}
+
+.services .service-box.green {
+  border-bottom: 3px solid #08da4e;
+}
+
+.services .service-box.green .icon {
+  color: #08da4e;
+  background: #cffddf;
+}
+
+.services .service-box.green .read-more {
+  color: #08da4e;
+}
+
+.services .service-box.green:hover {
+  background: #08da4e;
+}
+
+.services .service-box.red {
+  border-bottom: 3px solid #e9222c;
+}
+
+.services .service-box.red .icon {
+  color: #e9222c;
+  background: #fef7f8;
+}
+
+.services .service-box.red .read-more {
+  color: #e9222c;
+}
+
+.services .service-box.red:hover {
+  background: #e9222c;
+}
+
+.services .service-box.purple {
+  border-bottom: 3px solid #b50edf;
+}
+
+.services .service-box.purple .icon {
+  color: #b50edf;
+  background: #f8e4fd;
+}
+
+.services .service-box.purple .read-more {
+  color: #b50edf;
+}
+
+.services .service-box.purple:hover {
+  background: #b50edf;
+}
+
+.services .service-box.pink {
+  border-bottom: 3px solid #f51f9c;
+}
+
+.services .service-box.pink .icon {
+  color: #f51f9c;
+  background: #feecf7;
+}
+
+.services .service-box.pink .read-more {
+  color: #f51f9c;
+}
+
+.services .service-box.pink:hover {
+  background: #f51f9c;
+}
+
+.services .service-box:hover h3,
+.services .service-box:hover p,
+.services .service-box:hover .read-more {
+  color: #fff;
+}
+
+.services .service-box:hover .icon {
+  background: #fff;
+}
+
+
+</style>
+    
+
+<footer>
+    <small>Copyright © 2024 projet Tontine.</small>
+  </footer>
+{% endblock %}
+</body>

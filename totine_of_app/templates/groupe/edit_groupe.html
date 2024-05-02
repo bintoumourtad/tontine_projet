@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+    {% block contenu %}
+<div class="row mt-2">
+    <div class="col-md-6 m-auto">
+        <div class="card card-body">
+        <form method="POST">
+            {%csrf_token %}
+            <div class="form-group">
+                <label for="nom">Nom</label>
+                 <input type="text" class="form-control" name="nom"value="{{groupe.nom}}"/>
+            </div>
+            <div class="form-group">
+                <label for="cotisation_amount">cotisation_amount</label>
+                 <input type="text" class="form-control" name="cotisation_amount" value="{{groupe.cotisation_amount}}" />
+            </div>
+
+            <div class="form-group">
+                <label for="frequence_despaiement">frequence_despaiement</label>
+                 <input type="text" class="form-control" name="frequence_despaiement"  value="{{groupe.frequence_despaiement}}" />
+            </div>
+            <div class="form-group">
+                <label for="date_decréation">date_decréation</label>
+                 <input type="text" class="form-control" name="date_decréation" />
+            </div>
+            </a><button class="btn btn-primary mt-4 " type="submit">Enregistre</button><br><br>
+        </form>
+        </div>
+    
+    </div>
+</div>
+
+    {% endblock %}

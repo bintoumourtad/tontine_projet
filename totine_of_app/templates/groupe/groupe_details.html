@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+    {% block contenu %}
+
+    <div class="table-responsive-vertical shadow-z-1">
+        <table id="" class="table table-hover table-mc-light-blue ">
+            <thead>
+              <tr>
+                <th>nom</th>
+                <th>cotisation_amount</th><br>
+                <th>frequence_despaiement</th>
+                <th>date_decréation</th>
+
+              </tr>
+            <tbody>
+              <a href="{% url 'liste'%}"  class="btn btn-primary">les membres
+                <tr> 
+                <td>{{groupe.nom}}</td>
+                <td>{{groupe.cotisation_amount}}</td>
+                <td>{{groupe.frequence_despaiement}}</td>
+                <td>{{groupe.date_decréation}}</td>
+                </tr>
+              </a>
+            </thead>
+            </tbody>
+        </table> 
+        <div class="mt-2">
+           <a href="{% url 'edit' groupe.id %}" class="btn btn-primary">modifier</a>   
+        </div>    
+      </div>    
+{% endblock %}

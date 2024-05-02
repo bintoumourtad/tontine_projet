@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{%block contenu %}
+
+<div class="row mt-4">
+  <div class="col-md-25 m-auto ">
+    <div class="card card-boody border-primary border border bg-dark p-1">
+      {% if groupe %}
+      <ul class="list-group list-group-flush">
+        {% for groupetontinee in groupe %}
+        <li class="list-group-item">
+        
+        <a href="{% url 'details' groupetontinee.id %}">
+        {{groupetontinee.nom}}</a
+        >
+       </li> 
+       {% endfor %}
+      </ul>
+      {% else %}
+      {% endif %} 
+    </div>
+     </div>
+    </div>
+    <div class="mt-2">
+      <a href="{%url 'new'%}" class="btn btn-info bg-primary">Créé Nouveau groupe</a>
+    </div>
+
+    <style media="screen">
+
+  footer {
+text-align: center;
+padding:8px;
+background-color:  #1d72af;;
+color: #faf8f8;
+width: 100%;
+margin-top:20%;
+}
+
+</style>
+  
+
+<footer>
+  <small>Copyright © 2024 projet Tontine.</small>
+</footer>
+{% endblock %}
